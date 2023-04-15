@@ -1,12 +1,7 @@
 fn main() {
-    let mut x = 0;
+    let x = 0;
 
-    loop {
-        println!("{x}");
-        x += 1;
-
-        if x == 10 {
-            break;
-        }
+    for i in x..10 {
+        println!("{i}");
     }
 }
