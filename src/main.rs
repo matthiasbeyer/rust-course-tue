@@ -22,15 +22,19 @@ fn main() {
 }
 
 
-#[test]
-fn test_my_programm() {
-    let test_vec = vec![String::from("foo"), String::from("1")];
-    programm(test_vec);
-}
+#[cfg(test)]
+mod test {
+    use super::programm;
 
-#[test]
-fn test_my_programm_42() {
-    let test_vec = vec![String::from("foo"), String::from("42")];
-    programm(test_vec);
-}
+    #[test]
+    fn test_my_programm() {
+        let test_vec = vec![String::from("foo"), String::from("1")];
+        programm(test_vec);
+    }
 
+    #[test]
+    fn test_my_programm_42() {
+        let test_vec = vec![String::from("foo"), String::from("42")];
+        programm(test_vec);
+    }
+}
