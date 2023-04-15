@@ -20,3 +20,17 @@ fn main() {
     let args = std::env::args().collect();
     programm(args)
 }
+
+
+#[test]
+fn test_my_programm() {
+    let test_vec = vec![String::from("foo"), String::from("1")];
+    programm(test_vec);
+}
+
+#[test]
+fn test_my_programm_42() {
+    let test_vec = vec![String::from("foo"), String::from("42")];
+    programm(test_vec);
+}
+
