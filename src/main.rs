@@ -21,20 +21,25 @@ fn main() {
     programm(args)
 }
 
-
 #[cfg(test)]
 mod test {
     use super::programm;
 
     #[test]
     fn test_my_programm() {
-        let test_vec = vec![String::from("foo"), String::from("1")];
+        let test_vec = ["foo", "1"]
+            .into_iter()
+            .map(String::from)
+            .collect();
         programm(test_vec);
     }
 
     #[test]
     fn test_my_programm_42() {
-        let test_vec = vec![String::from("foo"), String::from("42")];
+        let test_vec = ["foo", "42"]
+            .into_iter()
+            .map(String::from)
+            .collect();
         programm(test_vec);
     }
 }
